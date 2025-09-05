@@ -81,5 +81,18 @@ class DemoTest {
 
     }
 
+    @Test
+    public void should_return_coordinates_when_input_commend_L_direction_W(){
+        String commands = "L";
+
+        MarsRover marsRover = new MarsRover(0, 0,"W");
+        marsRover.executeCommands(commands);
+
+        assertEquals(0, marsRover.getX());
+        assertEquals(0, marsRover.getY());
+        assertEquals("S", marsRover.getDirection());
+
+    }
+
 
 }
