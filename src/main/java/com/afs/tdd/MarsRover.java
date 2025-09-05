@@ -1,17 +1,31 @@
 package com.afs.tdd;
 
+import java.util.Objects;
+
 public class MarsRover {
     private int x;
     private int y;
     private String direction;
-    public MarsRover(int x, int y, String direction) {
-    }
 
+    public MarsRover(int x, int y, String direction) {
+        this.x = x;
+        this.y = y;
+        this.direction = direction;
+    }
 
     public int getY() {
         return y;
     }
 
-    public void executeCommands(String commands) {
+
+    public int getX() {
+        return x;
     }
+
+    public String getDirection()  {
+        return direction;
+    }
+
+
+
 }
