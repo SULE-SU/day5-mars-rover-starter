@@ -155,5 +155,20 @@ class DemoTest {
         assertEquals("S", marsRover.getDirection());
     }
 
+    // 测试向后移动指令 B
+    @Test
+    public void should_return_coordinates_when_input_command_B_direction_N(){
+        String commands = "B";
+
+        MarsRover marsRover = new MarsRover(0, 0,"N");
+        marsRover.executeCommands(commands);
+
+        assertEquals(0, marsRover.getX());
+        assertEquals(-1, marsRover.getY());
+        assertEquals("N", marsRover.getDirection());
+    }
+
+
+
 
 }
