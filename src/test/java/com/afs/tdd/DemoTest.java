@@ -204,5 +204,17 @@ class DemoTest {
         assertEquals("W", marsRover.getDirection());
     }
 
+    @Test
+    public void should_return_coordinates_when_input_command_MLRB_direction_N(){
+        String commands = "MLRB"; // 所有指令的组合
+
+        MarsRover marsRover = new MarsRover(0, 0,"N");
+        marsRover.executeCommands(commands);
+
+        assertEquals(0, marsRover.getX());
+        assertEquals(0, marsRover.getY());
+        assertEquals("E", marsRover.getDirection());
+    }
+
 
 }
