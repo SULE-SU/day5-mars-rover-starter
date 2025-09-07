@@ -213,7 +213,7 @@ class DemoTest {
 
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
-        assertEquals("E", marsRover.getDirection());
+        assertEquals("N", marsRover.getDirection());
     }
 
     @Test
@@ -225,7 +225,7 @@ class DemoTest {
 
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
-        assertEquals("S", marsRover.getDirection());
+        assertEquals("E", marsRover.getDirection());
     }
 
     @Test
@@ -237,7 +237,7 @@ class DemoTest {
 
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
-        assertEquals("W", marsRover.getDirection());
+        assertEquals("S", marsRover.getDirection());
     }
 
     @Test
@@ -249,8 +249,9 @@ class DemoTest {
 
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
-        assertEquals("N", marsRover.getDirection());
+        assertEquals("W", marsRover.getDirection());
     }
+
 
 
 }
