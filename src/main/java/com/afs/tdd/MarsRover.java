@@ -109,20 +109,17 @@ public class MarsRover {
 
     // refactor：支持批量命令处理，使用Java Stream代替for循环
     public void executeCommands(String commands) {
-            switch (commands) {
-                case "M":
-                    move();
-                    break;
-                case "L":
-                    turnLeft();
-                    break;
-                case "R":
-                    turnRight();
-                    break;
-                case "B":
-                    moveBackward();
-                    break;
-            }
+        commands.chars()
+                .mapToObj(c -> (char) c)
+                .forEach(commandChar -> executeSingleCommand(String.valueOf(commandChar)));
+    }
+
+    //执行单个命令的私有方法
+    private void executeSingleCommand(String command) {
+        Command commandObj = COMMAND_MAP.get(command);
+        if (commandObj != null) {
+            commandObj.execute(this);
+        }
     }
 
 
