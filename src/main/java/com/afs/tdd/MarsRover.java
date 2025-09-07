@@ -114,7 +114,6 @@ public class MarsRover {
                 .forEach(commandChar -> executeSingleCommand(String.valueOf(commandChar)));
     }
 
-    //执行单个命令的私有方法
     private void executeSingleCommand(String command) {
         Command commandObj = COMMAND_MAP.get(command);
         if (commandObj != null) {
