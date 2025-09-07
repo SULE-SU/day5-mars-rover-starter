@@ -1,11 +1,23 @@
 package com.afs.tdd;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class MarsRover {
     private int x;
     private int y;
     private String direction;
+
+    private static final Map<String, Command> COMMAND_MAP = new HashMap<>();
+
+    static {
+        COMMAND_MAP.put("M", new MoveCommand());
+        COMMAND_MAP.put("L", new TurnLeftCommand());
+        COMMAND_MAP.put("R", new TurnRightCommand());
+        COMMAND_MAP.put("B", new MoveBackwardCommand());
+    }
+
 
     public MarsRover(int x, int y, String direction) {
         this.x = x;
