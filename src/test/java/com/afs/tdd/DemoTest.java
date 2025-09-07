@@ -206,7 +206,7 @@ class DemoTest {
 
     @Test
     public void should_return_coordinates_when_input_command_MLRB_direction_N(){
-        String commands = "MLRB"; // 所有指令的组合
+        String commands = "MLRB";
 
         MarsRover marsRover = new MarsRover(0, 0,"N");
         marsRover.executeCommands(commands);
@@ -218,7 +218,7 @@ class DemoTest {
 
     @Test
     public void should_return_coordinates_when_input_command_MLRB_direction_E(){
-        String commands = "MLRB"; // 所有指令的组合
+        String commands = "MLRB";
 
         MarsRover marsRover = new MarsRover(0, 0,"E");
         marsRover.executeCommands(commands);
@@ -226,6 +226,18 @@ class DemoTest {
         assertEquals(0, marsRover.getX());
         assertEquals(0, marsRover.getY());
         assertEquals("S", marsRover.getDirection());
+    }
+
+    @Test
+    public void should_return_coordinates_when_input_command_MLRB_direction_S(){
+        String commands = "MLRB";
+
+        MarsRover marsRover = new MarsRover(0, 0,"S");
+        marsRover.executeCommands(commands);
+
+        assertEquals(0, marsRover.getX());
+        assertEquals(0, marsRover.getY());
+        assertEquals("W", marsRover.getDirection());
     }
 
 
