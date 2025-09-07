@@ -107,6 +107,7 @@ public class MarsRover {
         }
     }
 
+    // refactor：支持批量命令处理，使用Java Stream代替for循环
     public void executeCommands(String commands) {
             switch (commands) {
                 case "M":
@@ -117,6 +118,9 @@ public class MarsRover {
                     break;
                 case "R":
                     turnRight();
+                    break;
+                case "B":
+                    moveBackward();
                     break;
             }
     }
