@@ -168,6 +168,17 @@ class DemoTest {
         assertEquals("N", marsRover.getDirection());
     }
 
+    @Test
+    public void should_return_coordinates_when_input_command_B_direction_S(){
+        String commands = "B";
+
+        MarsRover marsRover = new MarsRover(0, 0,"S");
+        marsRover.executeCommands(commands);
+
+        assertEquals(0, marsRover.getX());
+        assertEquals(1, marsRover.getY());
+        assertEquals("S", marsRover.getDirection());
+    }
 
 
 
